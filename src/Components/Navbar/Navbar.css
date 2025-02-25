@@ -1,0 +1,161 @@
+/* Navbar.css */
+
+/* General Styles */
+.navbar {
+    background-color: #001233;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Top Bar */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #a7a9ab;
+    font-size: 14px;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon {
+    color: #42c2f4;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: white;
+  }
+  
+  /* Main Navbar */
+  .main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 150px; /* Adjust logo size */
+    height: 70px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 18px;
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li:hover {
+    color: #42c2f4;
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .phone-icon {
+    color: #42c2f4;
+  }
+  
+  .phone-number {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .chat-button {
+    background-color: #42c2f4;
+    color: #001233;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .chat-button:hover {
+    background-color: white;
+    color: #001233;
+  }
+  
+  /* Hamburger Menu (Mobile) */
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .hamburger:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .top-bar {
+      flex-direction: column;
+      text-align: center;
+      gap: 5px;
+    }
+  
+    .main-navbar {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .hamburger {
+      display: block;
+      color: #42c2f4;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #001233;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease-in-out;
+    }
+  
+    .nav-links.open {
+      height: 250px; /* Open dropdown */
+      padding: 20px 0;
+    }
+  }
+  

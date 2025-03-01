@@ -468,10 +468,10 @@
 }
 
 .features-heading {
-  font-size: 2.5rem;
+  font-size: 2rem; /* Adjusted for mobile */
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* Slider */
@@ -480,18 +480,21 @@
   overflow: hidden;
   position: relative;
   display: flex;
+  justify-content: center;
 }
 
 .features-track {
   display: flex;
-  gap: 20px;
-  animation: scroll 25s linear infinite;
+  gap: 15px;
+  animation: scroll 20s linear infinite;
   width: fit-content;
 }
 
+
 /* Feature Cards */
 .feature-card {
-  width: 300px;
+  width: 90%; /* Adjusted for mobile */
+  max-width: 220px; /* Ensures proper fit */
   background: #FFFFFF;
   color: #001233;
   border-radius: 15px;
@@ -503,11 +506,14 @@
 
 .feature-card img {
   width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  max-height: 150px; /* Ensures images don’t get too large */
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .feature-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 10px 0;
 }
 
@@ -541,24 +547,33 @@
   }
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .feature-card {
-    width: 250px;
-  }
-}
-
-@media (max-width: 768px) {
-  .feature-card {
-    width: 220px;
-  }
-}
-
+/* Mobile Responsive */
 @media (max-width: 480px) {
+  .features-heading {
+    font-size: 1.8rem;
+  }
+
+  .features-track {
+    gap: 10px;
+  }
+
   .feature-card {
-    width: 200px;
+    width: 85%;
+    max-width: 200px;
+  }
+
+  .feature-card img {
+    height: 120px;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .learn-more {
+    padding: 6px 12px;
+    font-size: 0.85rem;
   }
 }
+
 
 
 
@@ -632,14 +647,23 @@
   background: linear-gradient(135deg, #001233, #42C2F4);
   color: #FFFFFF;
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 60px 20px;
   text-align: center;
+}
+
+/* Mission Image */
+.mission-img {
+  width: 800px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 30px;
 }
 
 /* Our Mission */
 .mission-content {
   max-width: 800px;
-  margin: 0 auto;
 }
 
 .mission-heading {
@@ -696,18 +720,31 @@
   margin-bottom: 10px;
 }
 
-/* Responsive */
+/* Responsive - Mobile View */
 @media (max-width: 768px) {
+  .mission-container {
+    flex-direction: column;
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .mission-img {
+    width: 80%;
+    max-width: 250px;
+    margin: 0 auto 20px auto;
+  }
+
   .mission-heading {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .mission-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   .why-choose-heading {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .why-choose-list {
@@ -716,7 +753,36 @@
   }
 
   .feature-item {
-    width: 80%;
+    width: 90%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-container {
+    padding: 20px 10px;
+  }
+
+  .mission-heading {
+    font-size: 1.6rem;
+  }
+
+  .mission-text {
+    font-size: 0.9rem;
+  }
+
+  .why-choose-heading {
+    font-size: 1.4rem;
+  }
+
+  .feature-item {
+    width: 100%;
+    max-width: 230px;
+  }
+
+  .mission-img {
+    width: 100%;
+    max-width: 320px;
   }
 }
 
@@ -830,7 +896,9 @@
   transition: transform 0.3s ease-in-out, box-shadow 0.3s;
   animation: slideUp 1.5s ease-in-out;
 }
-
+.ride-car-images{
+  height: 600px;
+}
 .feature-card:hover {
   transform: scale(1.05);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
@@ -854,7 +922,9 @@
   justify-content: space-around;
   padding-top: 30px;
 }
-
+.car-last-image-white{
+  height: 400px;
+}
 .ride-key-features ul {
   list-style: none;
   padding: 0;
@@ -977,5 +1047,27 @@
 
   .ride-key-features li {
     font-size: 1.1rem;
+  }
+  .ride-car-images{
+    height: 200px;
+  }
+  .ride-hero {
+    background-color: #a4c7d4;
+    padding: 120px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  .car-last-image-white{
+    height: 200px;
+
+  }
+  .car-conatiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 30px;
   }
 }

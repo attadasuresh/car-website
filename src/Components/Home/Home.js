@@ -17,7 +17,7 @@ const Hero = () => {
   
   return (
     <>
-    <section className="hero">
+    <section className="hero" >
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <h4 className="subheading">RIDE BOOKING SERVICE</h4>
@@ -76,20 +76,21 @@ const Hero = () => {
 
 
     <div className="features-container">
-      <h2 className="features-heading">More Features</h2>
-      <div className="features-slider">
-        <div className="features-track">
-          {[...features, ...features].map((feature, index) => (
-            <div key={index} className="feature-card">
-              <img src={feature.img} alt={feature.title}  style={{height:"250px"}}/>
-              <h3>{feature.title}</h3>
-              <p dangerouslySetInnerHTML={{ __html: feature.desc }}></p>
-              <button className="learn-more">Learn More</button>
-            </div>
-          ))}
+  <h2 className="features-heading">More Features</h2>
+  <div className="features-slider">
+    <div className="features-track">
+      {[...features, ...features].map((feature, index) => (
+        <div key={index} className="feature-card">
+          <img src={feature.img} alt={feature.title} className="feature-images" />
+          <h3>{feature.title}</h3>
+          <p dangerouslySetInnerHTML={{ __html: feature.desc }}></p>
+          <button className="learn-more">Learn More</button>
         </div>
-      </div>
+      ))}
     </div>
+  </div>
+</div>
+
 
 
     <div className="about-container">
@@ -106,9 +107,7 @@ const Hero = () => {
 
 
     <div className="mission-container">
-      <img src="images/Taxi-Driver-PNG-Image.png" alt="why-img"/>
-      <div>
-
+      <img src="images/Taxi-Driver-PNG-Image.png" alt="why-img" className="mission-img" />
       <div className="mission-content">
         <h2 className="mission-heading">Our Mission</h2>
         <p className="mission-text">
@@ -116,31 +115,29 @@ const Hero = () => {
           and drivers can manage their schedules and earnings effectively. <br /><br />
           Transparency, safety, and customer satisfaction are at the core of our mission.
         </p>
-      </div>
 
-      <div className="why-choose-container">
-        <h2 className="why-choose-heading">Why Choose RideReady?</h2>
-        <div className="why-choose-list">
-          <div className="feature-item">
-            <FaMapMarkerAlt className="feature-icon" />
-            <p>Real-time driver tracking</p>
-          </div>
-          <div className="feature-item">
-            <FaDollarSign className="feature-icon" />
-            <p>Affordable and transparent pricing</p>
-          </div>
-          <div className="feature-item">
-            <FaShieldAlt className="feature-icon" />
-            <p>Safe and secure payment processing</p>
-          </div>
-          <div className="feature-item">
-            <FaHeadset className="feature-icon" />
-            <p>Reliable customer support</p>
+        <div className="why-choose-container">
+          <h2 className="why-choose-heading">Why Choose RideReady?</h2>
+          <div className="why-choose-list">
+            <div className="feature-item">
+              <FaMapMarkerAlt className="feature-icon" />
+              <p>Real-time driver tracking</p>
+            </div>
+            <div className="feature-item">
+              <FaDollarSign className="feature-icon" />
+              <p>Affordable and transparent pricing</p>
+            </div>
+            <div className="feature-item">
+              <FaShieldAlt className="feature-icon" />
+              <p>Safe and secure payment processing</p>
+            </div>
+            <div className="feature-item">
+              <FaHeadset className="feature-icon" />
+              <p>Reliable customer support</p>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-
     </div>
 
 
@@ -148,7 +145,7 @@ const Hero = () => {
     <div className="ride-container">
       {/* Hero Section */}
       <div className="ride-hero">
-<img src="images/chauffeur-barcelona.png" alt="car"/>
+<img src="images/chauffeur-barcelona.png" alt="car" className="ride-car-images"/>
       {/* Steps Section */}
       <div className="ride-steps">
         <div className="step-card">
@@ -213,9 +210,13 @@ const Hero = () => {
         </div>
       </div>
 
+
+
+
+
       {/* Key Features Section */}
       <div className="car-conatiner" >
-       <img src="images/16352257487881.png" />
+       <img src="images/16352257487881.png" className="car-last-image-white" />
         <div className="ride-key-features">
 
         <h2>Key Features You’ll Love</h2>

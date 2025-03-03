@@ -9,9 +9,9 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Top Bar */}
       <div className="top-bar">
-        <span>support@domain.com</span>
-        <span>Mon to Fri: 9:00am - 6:00pm</span>
-        <span>Fairview Ave, El Monte, CA 91732</span>
+        <span>qdrive@gmail.com</span>
+        <span>Book any Time</span>
+        <span>Visakhapatnam</span>
         <div className="icons">
           <FaGlobe className="icon" />
           <FaCommentDots className="icon" />
@@ -42,7 +42,7 @@ const Navbar = () => {
         {/* Contact Info */}
         <div className="contact-info">
           <FaPhoneAlt className="phone-icon" />
-          <span className="phone-number">+1 755 302 8549</span>
+          <span className="phone-number">+91 7799622533</span>
           <button className="chat-button">Online Chat</button>
         </div>
       </div>
